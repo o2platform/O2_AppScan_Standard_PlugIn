@@ -1,0 +1,18 @@
+﻿<?xml version="1.0"?>
+<AppScanExtension>
+  <FullName>O2 Platform</FullName>
+  <Description>O2 Platform Plug-in for AppScan</Description>
+  <Version>1.0</Version>
+  <Author>Author Name</Author>
+  <Copyright>My Copyright info</Copyright>
+  <HomepageURL>http://o2platform.com</HomepageURL>
+
+  <IconFile>O2Logo_Small.gif</IconFile>
+
+  <MainDllFile>O2_AppScan_Standard_PlugIn.dll</MainDllFile>
+  <TargetEdition>
+
+    <ID>All</ID>
+    <MinCompatibleVersion>7.5</MinCompatibleVersion>    
+  </TargetEdition>
+</AppScanExtension>

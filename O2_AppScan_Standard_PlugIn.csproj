@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{54B70CCD-39D7-4CD1-BE5D-2C47AFAD2D0D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>O2_AppScan_Standard_PlugIn</RootNamespace>
+    <AssemblyName>O2_AppScan_Standard_PlugIn</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\AppData\Roaming\IBM\Rational AppScan\Extensions\O2_AppScan_Standard_PlugIn\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AppScanSDK">
+      <HintPath>..\..\..\..\..\..\Program Files\IBM\Rational AppScan\AppScanSDK.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ascx_Quick_Development_GUI.cs, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>_External_Dlls\ascx_Quick_Development_GUI.cs.dll</HintPath>
+    </Reference>
+    <Reference Include="O2SharpDevelop, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>_External_Dlls\O2SharpDevelop.dll</HintPath>
+    </Reference>
+    <Reference Include="O2_API_AST, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>_External_Dlls\O2_API_AST.dll</HintPath>
+    </Reference>
+    <Reference Include="O2_External_SharpDevelop, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>_External_Dlls\O2_External_SharpDevelop.dll</HintPath>
+    </Reference>
+    <Reference Include="O2_FluentSharp_BCL">
+      <HintPath>..\..\..\..\..\..\_WorkDir\O2\O2 Install\O2.FluentSharp\binaries\O2_FluentSharp_BCL.dll</HintPath>
+    </Reference>
+    <Reference Include="O2_FluentSharp_CoreLib">
+      <HintPath>..\..\..\..\..\..\_WorkDir\O2\O2 Install\O2.FluentSharp\binaries\O2_FluentSharp_CoreLib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="O2_AppScan.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="info.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="O2Logo_Small.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="_External_Dlls\ascx_Quick_Development_GUI.cs.dll" />
+    <Content Include="_External_Dlls\O2SharpDevelop.dll" />
+    <Content Include="_External_Dlls\O2_API_AST.dll" />
+    <Content Include="_External_Dlls\O2_External_SharpDevelop.dll" />
+    <Content Include="_External_Dlls\O2_FluentSharp_BCL.dll" />
+    <Content Include="_External_Dlls\O2_FluentSharp_CoreLib.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
